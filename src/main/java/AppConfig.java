@@ -2,6 +2,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+
 @Configuration
 public class AppConfig {
  
@@ -12,9 +13,10 @@ public class AppConfig {
         return helloWorld;
     }
 
+    @Scope("prototype")
     @Bean(name="cat")
     public Cat getCat() {
-        Cat cat = new Cat("Vaska");
+        Cat cat = new Cat("Vasya");
         return cat;
     }
 }
